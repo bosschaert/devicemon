@@ -6,7 +6,12 @@
 
 -runvm: -Dosgi.console
 -runrequires: osgi.identity;filter:='(osgi.identity=pimon)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)'
--runbundles: javax.servlet;version='[2.5.0,2.5.1)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.sshd.core)'
+-runbundles: ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
+	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
+	javax.servlet;version='[2.5.0,2.5.1)',\
 	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
-	pimon;version=latest
+	org.apache.sshd.core;version='[0.9.0,0.9.1)',\
+	pimon;version=latest,\
+	slf4j.api;version='[1.6.2,1.6.3)'

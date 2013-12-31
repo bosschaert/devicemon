@@ -1,6 +1,7 @@
 -buildpath: osgi.core;version=5.0,\
 	osgi.enterprise;version=5.0,\
-	javax.servlet;version=2.5
+	javax.servlet;version=2.5,\
+	org.apache.sshd.core
 Bundle-Version: 0.0.1
 Private-Package: org.coderthoughts.pimon
 Bundle-Activator: org.coderthoughts.pimon.Activator
