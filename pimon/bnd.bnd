@@ -1,0 +1,8 @@
+-buildpath: osgi.core;version=5.0,\
+	osgi.enterprise;version=5.0,\
+	javax.servlet;version=2.5
+Bundle-Version: 0.0.1
+Private-Package: org.coderthoughts.pimon
+Bundle-Activator: org.coderthoughts.pimon.Activator
+-runfw: org.eclipse.osgi;version='[3.9.0.v20130529-1710,3.9.0.v20130529-1710]'
+-runee: JavaSE-1.7
