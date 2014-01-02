@@ -7,11 +7,17 @@
 -runvm: -Dosgi.console
 -runrequires: osgi.identity;filter:='(osgi.identity=pimon)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.sshd.core)'
--runbundles: ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
-	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
-	javax.servlet;version='[2.5.0,2.5.1)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.sshd.core)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.runtime)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=slf4j.simple)'
+-runbundles: javax.servlet;version='[2.5.0,2.5.1)',\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
 	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
 	org.apache.sshd.core;version='[0.9.0,0.9.1)',\
 	pimon;version=latest,\
-	slf4j.api;version='[1.6.2,1.6.3)'
+	slf4j.api;version='[1.7.5,1.7.6)',\
+	slf4j.simple;version='[1.7.5,1.7.6)'
