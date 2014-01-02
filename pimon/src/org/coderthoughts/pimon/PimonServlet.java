@@ -19,7 +19,7 @@ public class PimonServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
-        writer.print("<H1>Hello!!</H1>");
+        writer.print("<H1>Pi Monitor</H1>");
         writer.print("<form method='post'>Add a pi host:<input type='text' name='hostname' size='15' />"
                 + " port:<input type='text' name='port' value='22' size='5' />"
                 + " user:<input type='text' name='user' size='10' />"
@@ -38,7 +38,7 @@ public class PimonServlet extends HttpServlet {
             monURL.append("&port=");
             monURL.append(host.getPort());
 
-            writer.write("<iframe src='" + monURL + "'></iframe>");
+            writer.write("<iframe width='800' src='" + monURL + "'></iframe><p/>");
         }
         writer.write("</UL>");
         writer.flush();

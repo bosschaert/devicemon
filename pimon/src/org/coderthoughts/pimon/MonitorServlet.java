@@ -46,7 +46,15 @@ public class MonitorServlet extends HttpServlet {
         writer.print("Command: ");
         writer.print(command);
         writer.print("<p/>");
-        writer.print(getInfoViaSSH(host, port, activator.getHostUser(host, port), activator.getHostPassword(host, port), command));
+        try {
+            writer.write("<span style='color:green'>");
+            writer.print(getInfoViaSSH(host, port, activator.getHostUser(host, port), activator.getHostPassword(host, port), command));
+            writer.write("</span>");
+        } catch (Exception e) {
+            writer.write("<span style='color:red'>Unable to contact host. Error message: ");
+            writer.write(e.getMessage());
+            writer.write("</span>");
+        }
         writer.print("</pre>");
         writer.flush();
         writer.close();
