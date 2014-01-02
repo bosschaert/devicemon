@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="pimon.esa" default="build" basedir=".">
+    <target name="build">
+        <zip destfile="${basedir}/generated/pimon.esa">
+            <fileset dir="${basedir}/src">
+                <include name="**/*.MF"/>
+            </fileset>
+            <fileset file="${basedir}/../pimon/generated/pimon.jar"/>
+        </zip>
+    </target>
+</project>
+

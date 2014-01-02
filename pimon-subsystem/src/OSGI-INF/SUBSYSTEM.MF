@@ -1,0 +1,4 @@
+Subsystem-SymbolicName: pimon
+Subsystem-Version: 0.0.1
+Subsystem-Type: osgi.subsystem.feature
+
