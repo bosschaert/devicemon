@@ -30,6 +30,12 @@ public class MonitorServlet extends HttpServlet {
         String host = req.getParameter("host");
         if (host == null)
             throw new IllegalArgumentException("No host specified");
+        String portString = req.getParameter("port");
+        int port;
+        if (portString == null)
+            port = 22;
+        else
+            port = Integer.parseInt(portString);
 
         PrintWriter writer = resp.getWriter();
         writer.print("<H1>");
@@ -40,34 +46,34 @@ public class MonitorServlet extends HttpServlet {
         writer.print("Command: ");
         writer.print(command);
         writer.print("<p/>");
-        writer.print(getInfoViaSSH(host, activator.getHostUser(host), activator.getHostPassword(host), command));
+        writer.print(getInfoViaSSH(host, port, activator.getHostUser(host, port), activator.getHostPassword(host, port), command));
         writer.print("</pre>");
         writer.flush();
         writer.close();
     }
 
-    private String getInfoViaSSH(String host, String user, String pwd, String command) throws IOException {
+    private String getInfoViaSSH(String host, int port, String user, String pwd, String command) throws IOException {
         ConnectionData cd = new ConnectionData();
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        OutputStream pipe = openSshChannel(host, user, pwd, out, cd);
+        OutputStream pipe = openSshChannel(host, port, user, pwd, out, cd);
         pipe.write((command + "\n").getBytes());
         pipe.flush();
         closeSshChannel(pipe, cd);
         String contents = new String(out.toByteArray());
         int idx1 = contents.lastIndexOf(command) + command.length();
-        int idx2 = contents.lastIndexOf("logout");
+        int idx2 = contents.lastIndexOf("exit");
         String pass1 = contents.substring(idx1, idx2);
         int idx3 = pass1.lastIndexOf("\n");
         return pass1.substring(0, idx3);
     }
 
-    private OutputStream openSshChannel(String host, String user, String pwd, OutputStream out, ConnectionData cd) throws IOException {
+    private OutputStream openSshChannel(String host, int port, String user, String pwd, OutputStream out, ConnectionData cd) throws IOException {
         cd.client = SshClient.setUpDefaultClient();
         cd.client.start();
         ConnectFuture future;
         try {
-            future = cd.client.connect(host, 22).await();
+            future = cd.client.connect(host, port).await();
         } catch (InterruptedException e) {
             throw new IOException(e);
         }
@@ -92,7 +98,7 @@ public class MonitorServlet extends HttpServlet {
     }
 
     private void closeSshChannel(OutputStream pipe, ConnectionData cd) throws IOException {
-        pipe.write("logout\n".getBytes());
+        pipe.write("exit\n".getBytes());
         pipe.flush();
         cd.channel.waitFor(ClientChannel.CLOSED, 0);
         cd.session.close(true);

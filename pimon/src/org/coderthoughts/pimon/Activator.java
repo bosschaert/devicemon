@@ -53,9 +53,7 @@ public class Activator implements BundleActivator {
         hostsFile = bundleContext.getDataFile("hosts.properties");
 
         if (!hostsFile.exists()) {
-            // TODO remove
             Properties p = new Properties();
-            p.put("foo", "a b");
             try(FileOutputStream fos = new FileOutputStream(hostsFile)) {
                 p.store(fos, "");
             }
@@ -69,11 +67,11 @@ public class Activator implements BundleActivator {
         }
     }
 
-    synchronized boolean addHost(String host, String user, String pwd) throws IOException {
+    synchronized boolean addHost(String host, String port, String user, String pwd) throws IOException {
         if (user.contains(" "))
             throw new IllegalArgumentException("User cannot contain a space");
 
-        Object oldVal = hosts.put(host, user + " " + pwd);
+        Object oldVal = hosts.put(host + ":" + port, user + " " + pwd);
 
         try (OutputStream os = new FileOutputStream(hostsFile)) {
             hosts.store(os, "");
@@ -100,12 +98,22 @@ public class Activator implements BundleActivator {
         }
     }
 
-    public Collection<String> getHosts() {
-        return hosts.stringPropertyNames();
+    public Collection<Host> getHosts() {
+        List<Host> result = new ArrayList<>();
+
+        for (String key : hosts.stringPropertyNames()) {
+            int idx = key.indexOf(':');
+            if (idx < 0)
+                throw new IllegalStateException("Host is missing port number: " + key);
+
+            result.add(new Host(key.substring(0, idx), Integer.parseInt(key.substring(idx+1))));
+        }
+
+        return result;
     }
 
-    public String getHostUser(String host) {
-        String info = hosts.getProperty(host);
+    public String getHostUser(String host, int port) {
+        String info = hosts.getProperty(host + ":" + port);
         if (info == null)
             return null;
 
@@ -116,8 +124,8 @@ public class Activator implements BundleActivator {
             return null;
     }
 
-    public String getHostPassword(String host) {
-        String info = hosts.getProperty(host);
+    public String getHostPassword(String host, int port) {
+        String info = hosts.getProperty(host + ":" + port);
         if (info == null)
             return null;
 
@@ -127,4 +135,5 @@ public class Activator implements BundleActivator {
         else
             return null;
     }
+
 }
