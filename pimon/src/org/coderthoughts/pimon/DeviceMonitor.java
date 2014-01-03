@@ -24,10 +24,9 @@ public class DeviceMonitor {
 
     @PostConstruct
     public void postConstruct() throws Exception {
-        System.out.println("%%%%: " + httpService + "#" + bundleContext);
-
         Hosts hosts = new Hosts(bundleContext);
-        registerServlet("/dmon", new DeviceMonServlet(hosts));
+
+        registerServlet("/dmon", new MonitorServlet(hosts));
         registerServlet("/device", new DeviceServlet(hosts));
     }
 
