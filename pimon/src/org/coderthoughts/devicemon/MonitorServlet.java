@@ -1,4 +1,4 @@
-package org.coderthoughts.pimon;
+package org.coderthoughts.devicemon;
 
 import java.io.IOException;
 import java.io.PrintWriter;

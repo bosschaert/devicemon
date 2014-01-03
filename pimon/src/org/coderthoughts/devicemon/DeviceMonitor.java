@@ -1,4 +1,4 @@
-package org.coderthoughts.pimon;
+package org.coderthoughts.devicemon;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

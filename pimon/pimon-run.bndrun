@@ -5,8 +5,7 @@
 -resolve.effective: active
 
 -runvm: -Dosgi.console
--runrequires: osgi.identity;filter:='(osgi.identity=pimon)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)',\
+-runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.sshd.core)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.runtime)',\
@@ -30,8 +29,11 @@
 	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.swissbox.extender)',\
 	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.swissbox.lifecycle)',\
 	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.swissbox.tracker)',\
-	osgi.identity;filter:='(osgi.identity=org.jboss.weld.osgi-bundle)'
--runbundles: javax.servlet;version='[2.5.0,2.5.1)',\
+	osgi.identity;filter:='(osgi.identity=org.jboss.weld.osgi-bundle)',\
+	osgi.identity;filter:='(osgi.identity=devicemon-ssh)',\
+	osgi.identity;filter:='(osgi.identity=pimon)'
+-runbundles: devicemon-ssh;version=latest,\
+	javax.servlet;version='[2.5.0,2.5.1)',\
 	org.apache.felix.configadmin;version='[1.6.0,1.6.1)',\
 	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
 	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\

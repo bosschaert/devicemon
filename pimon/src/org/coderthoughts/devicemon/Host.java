@@ -1,4 +1,4 @@
-package org.coderthoughts.pimon;
+package org.coderthoughts.devicemon;
 
 class Host {
     private final String hostName;
