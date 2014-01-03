@@ -20,7 +20,7 @@ public class MonitorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
         writer.print("<H1>Device Monitor</H1>");
-        writer.print("<form method='post'>Add a device:<input type='text' name='hostname' size='15' />"
+        writer.print("<form method='post'>Add a device (SSH):<input type='text' name='hostname' size='15' />"
                 + " port:<input type='text' name='port' value='22' size='5' />"
                 + " user:<input type='text' name='user' size='10' />"
                 + " pwd:<input type='password' name='pwd' size='10' />"

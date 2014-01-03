@@ -31,8 +31,9 @@
 	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.swissbox.tracker)',\
 	osgi.identity;filter:='(osgi.identity=org.jboss.weld.osgi-bundle)',\
 	osgi.identity;filter:='(osgi.identity=devicemon-ssh)',\
-	osgi.identity;filter:='(osgi.identity=pimon)'
--runbundles: devicemon-ssh;version=latest,\
+	osgi.identity;filter:='(osgi.identity=devicemon)'
+-runbundles: devicemon;version=latest,\
+	devicemon-ssh;version=latest,\
 	javax.servlet;version='[2.5.0,2.5.1)',\
 	org.apache.felix.configadmin;version='[1.6.0,1.6.1)',\
 	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
@@ -60,6 +61,5 @@
 	org.ops4j.pax.swissbox.extender;version='[1.6.0,1.6.1)',\
 	org.ops4j.pax.swissbox.lifecycle;version='[1.6.0,1.6.1)',\
 	org.ops4j.pax.swissbox.tracker;version='[1.6.0,1.6.1)',\
-	pimon;version=latest,\
 	slf4j.api;version='[1.7.5,1.7.6)',\
 	slf4j.simple;version='[1.7.5,1.7.6)'
