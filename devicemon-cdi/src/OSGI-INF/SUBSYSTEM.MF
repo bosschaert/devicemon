@@ -1,0 +1,4 @@
+Subsystem-SymbolicName: cdi-subsystem
+Subsystem-Version: 0.5.0
+Subsystem-Type: osgi.subsystem.feature
+

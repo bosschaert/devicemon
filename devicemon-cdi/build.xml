@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="devicemon.esa" default="build" basedir=".">
+<project name="cdi.esa" default="build" basedir=".">
     <target name="build">
-        <zip destfile="${basedir}/generated/devicemon.esa">
+        <zip destfile="${basedir}/generated/cdi.esa">
             <fileset dir="${basedir}/src">
                 <include name="**/*.MF"/>
             </fileset>
-            <fileset file="${basedir}/../devicemon/generated/devicemon.jar"/>
-            <fileset file="${basedir}/../devicemon-ssh/generated/devicemon-ssh.jar"/>
+            <fileset file="${basedir}/bundles/*.jar"/>
         </zip>
     </target>
 
