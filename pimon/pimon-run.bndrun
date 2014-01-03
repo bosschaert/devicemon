@@ -11,13 +11,53 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.runtime)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
-	osgi.identity;filter:='(osgi.identity=slf4j.simple)'
+	osgi.identity;filter:='(osgi.identity=slf4j.simple)',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.scr)(version>=1.6.2))',\
+	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-annotation_1.0_spec)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-atinject_1.0_spec)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-el_2.2_spec)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-interceptor_1.1_spec)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-jcdi_1.0_spec)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.xbean.bundleutils)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.base.lang)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.base.spi)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.cdi.api)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.cdi.extender)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.cdi.extension)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.cdi.spi)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.cdi.weld)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.swissbox.core)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.swissbox.extender)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.swissbox.lifecycle)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.swissbox.tracker)',\
+	osgi.identity;filter:='(osgi.identity=org.jboss.weld.osgi-bundle)'
 -runbundles: javax.servlet;version='[2.5.0,2.5.1)',\
+	org.apache.felix.configadmin;version='[1.6.0,1.6.1)',\
 	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
 	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
 	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
 	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
+	org.apache.geronimo.specs.geronimo-annotation_1.0_spec;version='[1.1.1,1.1.2)',\
+	org.apache.geronimo.specs.geronimo-atinject_1.0_spec;version='[1.0.0,1.0.1)',\
+	org.apache.geronimo.specs.geronimo-el_2.2_spec;version='[1.0.4,1.0.5)',\
+	org.apache.geronimo.specs.geronimo-interceptor_1.1_spec;version='[1.0.0,1.0.1)',\
+	org.apache.geronimo.specs.geronimo-jcdi_1.0_spec;version='[1.0.0,1.0.1)',\
 	org.apache.sshd.core;version='[0.9.0,0.9.1)',\
+	org.apache.xbean.bundleutils;version='[3.13.0,3.13.1)',\
+	org.jboss.weld.osgi-bundle;version='[1.2.0,1.2.1)',\
+	org.ops4j.base.lang;version='[1.4.0,1.4.1)',\
+	org.ops4j.base.spi;version='[1.4.0,1.4.1)',\
+	org.ops4j.pax.cdi.api;version='[0.5.0,0.5.1)',\
+	org.ops4j.pax.cdi.extender;version='[0.5.0,0.5.1)',\
+	org.ops4j.pax.cdi.extension;version='[0.5.0,0.5.1)',\
+	org.ops4j.pax.cdi.spi;version='[0.5.0,0.5.1)',\
+	org.ops4j.pax.cdi.weld;version='[0.5.0,0.5.1)',\
+	org.ops4j.pax.swissbox.core;version='[1.6.0,1.6.1)',\
+	org.ops4j.pax.swissbox.extender;version='[1.6.0,1.6.1)',\
+	org.ops4j.pax.swissbox.lifecycle;version='[1.6.0,1.6.1)',\
+	org.ops4j.pax.swissbox.tracker;version='[1.6.0,1.6.1)',\
 	pimon;version=latest,\
 	slf4j.api;version='[1.7.5,1.7.6)',\
 	slf4j.simple;version='[1.7.5,1.7.6)'
