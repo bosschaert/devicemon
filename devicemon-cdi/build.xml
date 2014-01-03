@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="cdi.esa" default="build" basedir=".">
     <target name="build">
+        <exec executable="bash">
+            <arg value="-c"/>
+            <arg value="${basedir}/generate-subsystem-content-header.sh ${basedir}/generated/subsystem-content.header ${basedir}/bundles/*.jar"/>
+        </exec>
+        <concat destfile="${basedir}/generated/manifest/OSGI-INF/SUBSYSTEM.MF">
+            <fileset file="${basedir}/src/OSGI-INF/SUBSYSTEM.MF"/>
+            <fileset file="${basedir}/generated/subsystem-content.header"/>
+        </concat>
         <zip destfile="${basedir}/generated/cdi.esa">
-            <fileset dir="${basedir}/src">
+            <fileset dir="${basedir}/generated/manifest">
                 <include name="**/*.MF"/>
             </fileset>
             <fileset file="${basedir}/bundles/*.jar"/>

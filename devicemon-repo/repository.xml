@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
+
+<repository lastmodified='20140103151037.945' name='Untitled'>
+  <resource id='org.apache.felix.http.jetty/2.2.2' presentationname='Apache Felix Http Jetty' symbolicname='org.apache.felix.http.jetty' uri='local-repo/org.apache.felix.http.jetty-2.2.2.jar' version='2.2.2'>
+    <description>
+      Apache Felix is an OSGi implementation.
+    </description>
+    <size>
+      1335137
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://www.apache.org/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Apache Felix Http Jetty'/>
+      <p n='symbolicname' v='org.apache.felix.http.jetty'/>
+      <p n='version' t='version' v='2.2.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.felix.http.api'/>
+      <p n='uses' v='javax.servlet,org.osgi.service.http'/>
+      <p n='version' t='version' v='2.0.4'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.http'/>
+      <p n='uses' v='javax.servlet.http,javax.servlet'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='javax.servlet'/>
+      <p n='version' t='version' v='2.5.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='javax.servlet.resources'/>
+      <p n='version' t='version' v='2.5.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='javax.servlet.http'/>
+      <p n='uses' v='javax.servlet'/>
+      <p n='version' t='version' v='2.5.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.imageio)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.imageio
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.management
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management.modelmbean)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.management.modelmbean
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management.remote)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.management.remote
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.naming
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net.ssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.net.ssl
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.security.auth)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.security.auth
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.security.cert)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.security.cert
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.servlet)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package javax.servlet ;version=[2.5.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.servlet.http)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package javax.servlet.http ;version=[2.5.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.sql)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.sql
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.http.api)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.apache.felix.http.api ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.ietf.jgss)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.ietf.jgss
+    </require>
+    <require extend='false' filter='(&amp;(package=org.mortbay.log)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.mortbay.log
+    </require>
+    <require extend='false' filter='(&amp;(package=org.mortbay.util.ajax)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.mortbay.util.ajax
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.osgi.framework ;version=[1.5.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.osgi.service.event ;version=[1.2.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.http)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.osgi.service.http ;version=[1.2.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.osgi.service.log ;version=[1.3.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.osgi.util.tracker ;version=[1.4.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.slf4j
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j.helpers)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.slf4j.helpers
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j.spi)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.slf4j.spi
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.xml.sax
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax.helpers)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.xml.sax.helpers
+    </require>
+  </resource>
+  <resource id='org.apache.geronimo.specs.geronimo-servlet_2.5_spec/1.2.0' presentationname='geronimo-servlet_2.5_spec' symbolicname='org.apache.geronimo.specs.geronimo-servlet_2.5_spec' uri='local-repo/geronimo-servlet_2.5_spec-1.2.jar' version='1.2.0'>
+    <description>
+      Servlet 2.5 Specification
+    </description>
+    <size>
+      70593
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://www.apache.org
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='geronimo-servlet_2.5_spec'/>
+      <p n='symbolicname' v='org.apache.geronimo.specs.geronimo-servlet_2.5_spec'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='javax.servlet.http'/>
+      <p n='uses' v='javax.servlet'/>
+      <p n='version' t='version' v='2.5.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='javax.servlet'/>
+      <p n='version' t='version' v='2.5.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='javax.servlet.resources'/>
+      <p n='version' t='version' v='2.5.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.servlet)(version&gt;=2.5.0))' multiple='false' name='package' optional='false'>
+      Import package javax.servlet ;version=2.5.0
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.servlet.http)(version&gt;=2.5.0))' multiple='false' name='package' optional='false'>
+      Import package javax.servlet.http ;version=2.5.0
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.servlet.resources)(version&gt;=2.5.0))' multiple='false' name='package' optional='false'>
+      Import package javax.servlet.resources ;version=2.5.0
+    </require>
+  </resource>
+  <resource id='org.apache.sshd.core/0.9.0' presentationname='Apache Mina SSHD :: Core' symbolicname='org.apache.sshd.core' uri='local-repo/sshd-core-0.9.0.jar' version='0.9.0'>
+    <description>
+      The Apache Software Foundation provides support for the Apache
+       community of open-source software projects.    The Apache
+       projects are characterized by a collaborative, consensus based
+       development process, an open and    pragmatic software license,
+       and a desire to create high quality software that leads the
+       way in its field.    We consider ourselves not simply a group
+       of projects sharing a server, but rather a community of developers
+          and users.
+    </description>
+    <size>
+      464733
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0
+    </license>
+    <documentation>
+      http://www.apache.org/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Apache Mina SSHD :: Core'/>
+      <p n='symbolicname' v='org.apache.sshd.core'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.io.nio2'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.slf4j,org.apache.sshd.common,org.apache.sshd.common.future,org.apache.sshd.common.util'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.apache.sshd.agent,org.apache.sshd.common.file,org.slf4j,org.apache.sshd.common.future,org.apache.sshd.common.util,org.apache.sshd.common.session,org.apache.sshd.client.future,org.apache.sshd.common.channel'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.kex'/>
+      <p n='uses' v='javax.crypto.interfaces,org.apache.sshd.common.util,javax.crypto.spec,javax.crypto'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.keyprovider'/>
+      <p n='uses' v='org.apache.sshd.common,org.slf4j,org.apache.sshd.common.util,org.bouncycastle.openssl'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.session'/>
+      <p n='uses' v='org.apache.sshd.common.future,org.apache.sshd.common.io,org.slf4j,org.apache.sshd.common,org.apache.sshd.common.util,org.apache.sshd.client.channel'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client.future'/>
+      <p n='uses' v='org.apache.sshd.common.future,org.apache.sshd,org.apache.sshd.common'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.future'/>
+      <p n='uses' v='org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client.keyverifier'/>
+      <p n='uses' v='org.apache.sshd.common.util,org.apache.sshd.client,org.apache.sshd,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.channel'/>
+      <p n='uses' v='org.apache.sshd.common.util,org.apache.sshd.common,org.apache.sshd.client.future,org.slf4j,org.apache.sshd.common.channel,org.apache.sshd.common.future,org.apache.sshd.server,org.apache.sshd.common.file,org.apache.sshd.agent,org.apache.sshd.server.session'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.shell'/>
+      <p n='uses' v='org.apache.sshd.server,org.apache.sshd.server.session,org.apache.sshd.common.util,org.slf4j,org.apache.sshd.common'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.agent'/>
+      <p n='uses' v='org.apache.sshd.common'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client.scp'/>
+      <p n='uses' v='org.apache.sshd.common.future,org.apache.sshd.common.scp,org.apache.sshd.common,org.apache.sshd.client,org.apache.sshd.client.future,org.apache.sshd,org.apache.sshd.common.file,org.apache.sshd.client.channel'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.kex'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.apache.sshd.common.util,org.apache.sshd.common,org.apache.sshd.common.kex,org.apache.sshd.common.session,org.apache.sshd.server.session,org.apache.sshd.common.digest,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client.session'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.apache.sshd.common.future,org.apache.sshd.common.util,org.apache.sshd.server.channel,org.apache.sshd.common,org.apache.sshd.client.future,org.apache.sshd.common.channel,org.apache.sshd.client,org.apache.sshd.common.session,org.apache.sshd.client.channel,org.slf4j,org.apache.sshd.client.sftp,org.apache.sshd.agent,org.apache.sshd.client.scp,org.apache.sshd,org.apache.sshd.client.auth'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.command'/>
+      <p n='uses' v='org.apache.sshd.common.scp,org.apache.sshd.server,org.apache.sshd.common.file,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client.auth'/>
+      <p n='uses' v='org.apache.sshd.client,org.apache.sshd.client.session,org.slf4j,org.apache.sshd.common,org.apache.sshd.common.io,org.apache.sshd.common.util,org.apache.sshd.agent'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.random'/>
+      <p n='uses' v='org.apache.sshd.common,org.bouncycastle.crypto.prng'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.scp'/>
+      <p n='uses' v='org.apache.sshd.common.file,org.apache.sshd.common.util,org.apache.sshd.common,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.agent.local'/>
+      <p n='uses' v='org.apache.sshd.common.future,org.apache.sshd.common.util,org.apache.sshd.agent,org.apache.sshd.agent.common,org.apache.sshd.common,org.apache.sshd.client.future,org.slf4j,org.apache.sshd.client.channel,org.apache.sshd.common.channel,org.apache.sshd.common.signature,org.apache.sshd.server.session,org.apache.sshd.server.channel'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.forward'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.apache.sshd.common.future,org.apache.sshd.common,org.apache.sshd.client.future,org.apache.sshd.common.util,org.slf4j,org.apache.sshd.common.channel,org.apache.sshd.client.channel,org.apache.sshd.server.channel'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.agent.unix'/>
+      <p n='uses' v='org.apache.sshd.common.util,org.apache.sshd.common,org.apache.sshd.agent.common,org.apache.tomcat.jni,org.apache.sshd.common.future,org.apache.sshd.client.future,org.slf4j,org.apache.sshd.common.channel,org.apache.sshd.client.channel,org.apache.sshd.agent,org.apache.sshd.agent.local,org.apache.sshd.server.session,org.apache.sshd.server.channel'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.auth.gss'/>
+      <p n='uses' v='javax.security.auth.login,org.ietf.jgss,javax.security.auth.callback,javax.security.auth,org.apache.sshd.server.session,org.apache.sshd.common,org.apache.sshd.server,org.apache.sshd.common.io,org.apache.sshd.common.util,org.apache.sshd.server.auth,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.agent.common'/>
+      <p n='uses' v='org.apache.sshd.common.util,org.apache.sshd.agent,org.apache.sshd.common,org.apache.sshd.server.session,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.compression'/>
+      <p n='uses' v='org.apache.sshd.common,org.apache.sshd.common.util,com.jcraft.jzlib'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.cipher'/>
+      <p n='uses' v='org.apache.sshd.common,javax.crypto,org.apache.sshd.common.util,javax.crypto.spec'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.signature'/>
+      <p n='uses' v='org.apache.sshd.common.util,org.apache.sshd.common'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.file.nativefs'/>
+      <p n='uses' v='org.apache.sshd.common,org.slf4j,org.apache.sshd.common.file'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.file'/>
+      <p n='uses' v='org.apache.sshd.common'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client.channel'/>
+      <p n='uses' v='org.apache.sshd.common.future,org.apache.sshd.client.future,org.apache.sshd.common.util,org.apache.sshd.common,org.apache.sshd,org.slf4j,org.apache.sshd.common.channel'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.auth'/>
+      <p n='uses' v='org.apache.sshd.common.util,org.apache.sshd.server,org.apache.sshd.server.session,org.slf4j,org.apache.sshd.common,org.apache.sshd.common.io'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.io'/>
+      <p n='uses' v='org.apache.sshd.common,org.slf4j,org.apache.sshd.common.future,org.apache.sshd.common.util'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.util'/>
+      <p n='uses' v='org.apache.sshd.common,org.slf4j,org.bouncycastle.jce.provider,javax.crypto'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.keyprovider'/>
+      <p n='uses' v='org.apache.sshd.common.util,org.apache.sshd.common.keyprovider,org.slf4j,org.bouncycastle.openssl'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.mac'/>
+      <p n='uses' v='org.apache.sshd.common.util,javax.crypto.spec,org.apache.sshd.common,javax.crypto'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.x11'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.apache.sshd.common.future,org.apache.sshd.common.util,org.apache.sshd.common,org.apache.sshd.client.future,org.apache.sshd.client.channel,org.slf4j,org.apache.sshd.common.channel,org.apache.sshd.server.session'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.jaas'/>
+      <p n='uses' v='javax.security.auth.callback,javax.security.auth.login,org.apache.sshd.server,org.apache.sshd.server.session,javax.security.auth,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client.kex'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.apache.sshd.common.util,org.apache.sshd.common,org.apache.sshd.common.kex,org.apache.sshd.common.session,org.apache.sshd.client.session,org.apache.sshd.common.digest,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client.sftp'/>
+      <p n='uses' v='org.apache.sshd,org.apache.sshd.client,org.apache.sshd.common.future,org.apache.sshd.common.util,org.apache.sshd.common,org.apache.sshd.client.future,org.apache.sshd.client.channel'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.client'/>
+      <p n='uses' v='org.apache.sshd.common,org.apache.sshd,org.apache.sshd.common.io,org.apache.sshd.common.session,org.apache.sshd.client.session,org.apache.sshd.common.util'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server'/>
+      <p n='uses' v='org.apache.sshd.server.channel,org.apache.sshd.server.session,org.apache.sshd.common,org.apache.sshd.server.auth.gss,org.apache.sshd.common.util'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.io.mina'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.apache.mina.core.session,org.apache.sshd.common,org.apache.mina.core.service,org.apache.mina.transport.socket.nio,org.apache.mina.transport.socket,org.slf4j,org.apache.mina.core.future,org.apache.sshd.common.future,org.apache.sshd.common.util,org.apache.mina.core.buffer'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.sftp'/>
+      <p n='uses' v='org.apache.sshd.common.file,org.apache.sshd.common,org.apache.sshd.server,org.apache.sshd.common.util,org.apache.sshd.server.session,org.slf4j'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.server.session'/>
+      <p n='uses' v='org.apache.sshd.common.io,org.apache.sshd.common.future,org.apache.sshd.common.util,org.apache.sshd.server.channel,org.apache.sshd.common,org.apache.sshd.client.future,org.apache.sshd.common.channel,org.apache.sshd.common.session,org.apache.sshd.agent.common,org.slf4j,org.apache.sshd.server.x11,org.apache.sshd.server'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.digest'/>
+      <p n='uses' v='org.apache.sshd.common.util,org.apache.sshd.common'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd'/>
+      <p n='uses' v='org.apache.sshd.common.future,org.apache.sshd.client.future,org.apache.sshd.common,org.apache.sshd.client,org.apache.sshd.client.channel,org.apache.sshd.common.io,org.apache.sshd.common.session,org.apache.sshd.client.session,org.apache.sshd.client.keyverifier,org.apache.sshd.agent,org.apache.sshd.common.random,org.apache.sshd.common.forward,org.apache.sshd.common.compression,org.apache.sshd.common.cipher,org.apache.sshd.common.signature,org.apache.sshd.common.file.nativefs,org.apache.sshd.common.file,org.apache.sshd.common.util,org.apache.sshd.common.mac,org.apache.sshd.client.kex,org.apache.sshd.server,org.apache.sshd.server.session,org.apache.sshd.common.io.nio2,org.apache.sshd.server.channel,org.apache.sshd.server.shell,org.apache.sshd.server.kex,org.apache.sshd.server.command,org.apache.sshd.server.auth.gss,org.slf4j,org.apache.sshd.server.auth,org.apache.sshd.server.keyprovider,org.apache.sshd.common.io.mina,org.apache.sshd.server.sftp'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.sshd.common.channel'/>
+      <p n='uses' v='org.apache.sshd.common.future,org.apache.sshd.common,org.apache.sshd.common.io,org.slf4j,org.apache.sshd.common.util'/>
+      <p n='version' t='version' v='0.9.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.jcraft.jzlib)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package com.jcraft.jzlib
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto.interfaces)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto.interfaces
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto.spec)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto.spec
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.security.auth)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.security.auth
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.security.auth.callback)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.security.auth.callback
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.security.auth.login)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.security.auth.login
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.core.buffer)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.apache.mina.core.buffer ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.core.future)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.apache.mina.core.future ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.core.service)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.apache.mina.core.service ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.core.session)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.apache.mina.core.session ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.transport.socket)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.apache.mina.transport.socket ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.transport.socket.nio)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.apache.mina.transport.socket.nio ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.tomcat.jni)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.tomcat.jni
+    </require>
+    <require extend='false' filter='(&amp;(package=org.bouncycastle.crypto.prng)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.bouncycastle.crypto.prng
+    </require>
+    <require extend='false' filter='(&amp;(package=org.bouncycastle.jce.provider)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.bouncycastle.jce.provider
+    </require>
+    <require extend='false' filter='(&amp;(package=org.bouncycastle.openssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.bouncycastle.openssl
+    </require>
+    <require extend='false' filter='(&amp;(package=org.ietf.jgss)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.ietf.jgss
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='slf4j.api/1.7.5' presentationname='slf4j-api' symbolicname='slf4j.api' uri='local-repo/slf4j-api-1.7.5.jar' version='1.7.5'>
+    <description>
+      The slf4j API
+    </description>
+    <size>
+      26084
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='slf4j-api'/>
+      <p n='symbolicname' v='slf4j.api'/>
+      <p n='version' t='version' v='1.7.5'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.slf4j'/>
+      <p n='version' t='version' v='1.7.5'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.slf4j.spi'/>
+      <p n='version' t='version' v='1.7.5'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.slf4j.helpers'/>
+      <p n='version' t='version' v='1.7.5'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.slf4j.impl)(version&gt;=1.6.0))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j.impl ;version=1.6.0
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.3))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.3))
+    </require>
+  </resource>
+  <resource id='slf4j.simple/1.7.5' presentationname='slf4j-simple' symbolicname='slf4j.simple' uri='local-repo/slf4j-simple-1.7.5.jar' version='1.7.5'>
+    <description>
+      SLF4J Simple binding
+    </description>
+    <size>
+      10680
+    </size>
+    <capability name='fragment'>
+      <p n='host' v='slf4j.api'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='bundle'>
+      <p n='host' v='slf4j.api'/>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='slf4j-simple'/>
+      <p n='symbolicname' v='slf4j.simple'/>
+      <p n='version' t='version' v='1.7.5'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.slf4j.impl'/>
+      <p n='version' t='version' v='1.7.5'/>
+    </capability>
+    <require extend='true' filter='(&amp;(symbolicname=slf4j.api)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Required Host slf4j.api
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=slf4j.api)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle slf4j.api; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.7.5))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=1.7.5
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j.spi)(version&gt;=1.7.5))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j.spi ;version=1.7.5
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j.helpers)(version&gt;=1.7.5))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j.helpers ;version=1.7.5
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.3))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.3))
+    </require>
+  </resource>
+</repository>
