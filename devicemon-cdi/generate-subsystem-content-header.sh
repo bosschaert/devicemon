@@ -12,7 +12,7 @@ do
    fname="${var##*/}"
    bsn="${fname%-*}"
 
-   if [[ "$bsn" != *slf4j* ]] && [[ "$bsn" != *geronimo* ]]
+   if [[ "$bsn" != *slf4j* ]] && [[ "$bsn" != *geronimo* ]] && [[ "$bsn" != *swissbox* ]] && [[ "$bsn" != *base* ]] && [[ "$bsn" != *jboss* ]] && [[ "$bsn" != *xbean* ]]
    then
        suffix="${fname##*-}"
        version="${suffix%%.jar}"

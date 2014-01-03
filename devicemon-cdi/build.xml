@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="cdi.esa" default="build" basedir=".">
     <target name="build">
+        <mkdir dir="${basedir}/generated"/>
         <exec executable="bash">
             <arg value="-c"/>
             <arg value="${basedir}/generate-subsystem-content-header.sh ${basedir}/generated/subsystem-content.header ${basedir}/bundles/*.jar"/>
