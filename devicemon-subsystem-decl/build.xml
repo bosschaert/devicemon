@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="devicemon-decl.esa" default="build" basedir=".">
+    <target name="build">
+        <copy todir="${basedir}/local-repo">
+            <fileset file="${basedir}/../devicemon/generated/devicemon.jar"/>
+            <fileset file="${basedir}/../devicemon-ssh/generated/devicemon-ssh.jar"/>
+        </copy>
+        <zip destfile="${basedir}/generated/devicemon-decl.esa">
+            <fileset dir="${basedir}/src">
+                <include name="**/*.MF"/>
+            </fileset>
+        </zip>
+    </target>
+
+    <target name="clean">
+        <delete dir="${basedir}/generated"/>
+    </target>
+</project>
+
