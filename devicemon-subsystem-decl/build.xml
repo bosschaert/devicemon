@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="devicemon-decl.esa" default="build" basedir=".">
     <target name="build">
-        <copy todir="${basedir}/local-repo">
+        <copy todir="${basedir}/generated/local-repo">
             <fileset file="${basedir}/../devicemon/generated/devicemon.jar"/>
             <fileset file="${basedir}/../devicemon-ssh/generated/devicemon-ssh.jar"/>
         </copy>
@@ -10,6 +10,13 @@
                 <include name="**/*.MF"/>
             </fileset>
         </zip>
+
+        <fileset id="bundles" dir="${basedir}/generated/local-repo" includes="*.jar"/>
+        <pathconvert refid="bundles" property="bundlesarg" pathsep=" "/>
+
+        <java jar="${basedir}/lib/org.osgi.impl.bundle.repoindex.cli.jar" dir="${basedir}/generated" fork="true" failonerror="true">
+            <arg line="-r index.xml --pretty ${bundlesarg}"/>
+        </java>
     </target>
 
     <target name="clean">
