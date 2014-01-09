@@ -7,9 +7,7 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.aries.proxy)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.aries.subsystem.api)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.aries.subsystem.core)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.aries.subsystem.obr)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.aries.util)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.bundlerepository)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.resolver)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.coordinator)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.region)',\
@@ -18,7 +16,8 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.runtime)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
-	osgi.identity;filter:='(osgi.identity=subsystem-gogo-command)'
+	osgi.identity;filter:='(osgi.identity=subsystem-gogo-command)',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.http.jetty)(version>=2.2.0))'
 -runbundles: org.apache.aries.application.api;version='[1.0.0,1.0.1)',\
 	org.apache.aries.application.modeller;version='[1.0.0,1.0.1)',\
 	org.apache.aries.application.utils;version='[1.0.0,1.0.1)',\
@@ -26,13 +25,12 @@
 	org.apache.aries.proxy;version='[1.0.1,1.0.2)',\
 	org.apache.aries.subsystem.api;version='[1.0.0,1.0.1)',\
 	org.apache.aries.subsystem.core;version='[1.0.0,1.0.1)',\
-	org.apache.aries.subsystem.obr;version='[1.0.0,1.0.1)',\
 	org.apache.aries.util;version='[1.1.0,1.1.1)',\
-	org.apache.felix.bundlerepository;version='[1.6.6,1.6.7)',\
 	org.apache.felix.configadmin;version='[1.6.0,1.6.1)',\
 	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
 	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
 	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
 	org.apache.felix.resolver;version='[1.0.0,1.0.1)',\
 	org.eclipse.equinox.coordinator;version='[1.1.0,1.1.1)',\
 	org.eclipse.equinox.region;version='[1.1.0,1.1.1)',\
