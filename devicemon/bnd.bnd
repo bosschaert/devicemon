@@ -5,8 +5,7 @@
 	org.apache.geronimo.specs.geronimo-atinject_1.0_spec,\
 	devicemon-ssh;version=latest
 Bundle-Version: 0.0.1
-Private-Package: org.coderthoughts.devicemon,\
-	org.coderthoughts.devicemon.ssh
+Private-Package: org.coderthoughts.devicemon
 Require-Capability: osgi.extender; filter:="(osgi.extender=osgi.cdi)"
 -runfw: org.eclipse.osgi;version='[3.9.0.v20130529-1710,3.9.0.v20130529-1710]'
 -runee: JavaSE-1.7
