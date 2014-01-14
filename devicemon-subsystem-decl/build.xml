@@ -11,12 +11,24 @@
             </fileset>
         </zip>
 
-        <fileset id="bundles" dir="${basedir}/generated/local-repo" includes="*.jar"/>
+        <fileset id="bundles" dir="${basedir}/generated/local-repo">
+            <include name="*.jar"/>
+        </fileset>
         <pathconvert refid="bundles" property="bundlesarg" pathsep=" "/>
 
         <java jar="${basedir}/lib/org.osgi.impl.bundle.repoindex.cli.jar" dir="${basedir}/generated" fork="true" failonerror="true">
             <arg line="-r index.xml --pretty ${bundlesarg}"/>
         </java>
+
+        <!--
+        <length file="${basedir}/generated/local-repo/cdi.esa" property="cdil"/>
+        <echo>SHA-256 of local-repo/cdi.esa (with lenght ${cdil}):</echo>
+        <exec executable="shasum">
+            <arg value="-a"/>
+            <arg value="256"/>
+            <arg value="${basedir}/generated/local-repo/cdi.esa"/>
+        </exec> -->
+
     </target>
 
     <target name="clean">

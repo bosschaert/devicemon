@@ -1,7 +1,7 @@
 rm index.xml
 rm repository.xml
 
-java -jar ./bin/org.osgi.impl.bundle.bindex.jar -r repository.xml local-repo/*.jar
+# java -jar ./bin/org.osgi.impl.bundle.bindex.jar -r repository.xml local-repo/*.jar
 java -jar ../devicemon-subsystem-decl/lib/org.osgi.impl.bundle.repoindex.cli.jar -r index.xml --pretty local-repo/*.jar
 
 
