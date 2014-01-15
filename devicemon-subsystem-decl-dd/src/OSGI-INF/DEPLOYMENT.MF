@@ -1,5 +1,5 @@
 Subsystem-Version: 0.0.1
 Subsystem-Type: osgi.subsystem.feature
 Deployed-Content: devicemon;deployed-version=0.0.1,devicemon-ssh;deployed-version=0.0.1
-Provision-Resource: org.apache.sshd.core;deployed-version=0.9.0
+Provision-Resource: org.apache.sshd.core;deployed-version=0.9.0,cdi-subsystem;type=osgi.subsystem.feature;deployed-version=0.5.0
 
