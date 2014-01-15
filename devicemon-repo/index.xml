@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1389796692424' name='Untitled' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1389802088217' name='Untitled' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.apache.sshd.core'/>
@@ -829,9 +829,9 @@
       <attribute name='version' type='Version' value='0.5.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='dc3d0047ddc8540b3c2e893cd732cf657d0f7a1f3575e3d9669b70a87b8c0b4a'/>
+      <attribute name='osgi.content' value='cf437416541f1c04a503b4c4db9127c805a0d1989db6e71c3245e09d3b572d41'/>
       <attribute name='url' value='local-repo/cdi.esa'/>
-      <attribute name='size' type='Long' value='5060940'/>
+      <attribute name='size' type='Long' value='5060942'/>
       <attribute name='mime' value='application/vnd.osgi.subsystem'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
@@ -872,7 +872,7 @@
       <attribute name='version' type='Version' value='1.0.0'/>
       <directive name='uses' value='org.osgi.service.cdi,javax.enterprise.inject.spi'/>
     </capability>
-    <capability namespace='osgi.extender'>
+    <capability namespace='osgi.whiteboard'>
       <attribute name='osgi.whiteboard' value='osgi.http'/>
       <attribute name='version' type='Version' value='1.2.0'/>
       <directive name='uses' value='javax.servlet,javax.servlet.http'/>

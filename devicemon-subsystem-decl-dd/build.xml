@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="devicemon-decl-dd.esa" default="build" basedir=".">
+    <target name="build">
+        <zip destfile="${basedir}/generated/devicemon-decl-dd.esa" filesonly="true">
+            <fileset dir="${basedir}/src">
+                <include name="**/*.MF"/>
+            </fileset>
+        </zip>
+    </target>
+
+    <target name="clean">
+        <delete dir="${basedir}/generated"/>
+    </target>
+</project>
+
