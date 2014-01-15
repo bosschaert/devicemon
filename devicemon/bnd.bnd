@@ -6,7 +6,7 @@
 	devicemon-ssh;version=latest
 Bundle-Version: 0.0.1
 Private-Package: org.coderthoughts.devicemon
-Require-Capability: osgi.extender;filter:="(osgi.extender=osgi.cdi)", \
-    osgi.whiteboard;filter:="(osgi.whiteboard=osgi.http)"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.cdi)(version>=1.0.0)(!(version>=2.0.0)))", \
+    osgi.whiteboard;filter:="(&(osgi.whiteboard=osgi.http)(version>=1.2.0)(!(version>=2.0.0)))"
 -runfw: org.eclipse.osgi;version='[3.9.0.v20130529-1710,3.9.0.v20130529-1710]'
 -runee: JavaSE-1.7
