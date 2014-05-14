@@ -1,0 +1,20 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.6
+-runsystemcapabilities: ${native_capability}
+
+-resolve.effective: active
+
+-runbundles:  \
+	org.apache.felix.configadmin;version='[1.8.0,1.8.1)',\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
+	osgi.enterprise;version='[4.2.0,4.2.1)',\
+	org.apache.felix.http.jetty;version=2.2.2,\
+	devicemon-ds;version=latest
+
+-runrequires:  \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=devicemon-ds)'
