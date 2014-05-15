@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="http.esa" default="build" basedir=".">
+    <target name="build">
+        <mkdir dir="${basedir}/generated"/>
+        <exec executable="bash">
+            <arg value="-c"/>
+            <arg value="${basedir}/generate-subsystem-content-header.sh ${basedir}/generated/subsystem-content.header ${basedir}/bundles/*.jar"/>
+        </exec>
+        <concat destfile="${basedir}/generated/manifest/OSGI-INF/SUBSYSTEM.MF">
+            <fileset file="${basedir}/src/OSGI-INF/SUBSYSTEM.MF"/>
+            <fileset file="${basedir}/generated/subsystem-content.header"/>
+        </concat>
+        <zip destfile="${basedir}/generated/http.esa">
+            <fileset dir="${basedir}/generated/manifest">
+                <include name="**/*.MF"/>
+            </fileset>
+            <fileset file="${basedir}/bundles/*.jar"/>
+        </zip>
+    </target>
+
+    <target name="clean">
+        <delete dir="${basedir}/generated"/>
+    </target>
+</project>
+
