@@ -12,6 +12,11 @@
       <attribute name='size' type='Long' value='267629'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
+    <capability namespace='osgi.extender'>
+      <attribute name='osgi.extender' value='osgi.component'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+      <directive name='uses' value='org.osgi.service.component'/>
+    </capability>
     <capability namespace='osgi.wiring.bundle'>
       <attribute name='osgi.wiring.bundle' value='org.apache.felix.scr'/>
       <attribute name='bundle-version' type='Version' value='1.8.2'/>

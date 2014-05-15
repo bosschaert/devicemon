@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="devicemon-ds.esa" default="build" basedir=".">
+    <target name="build">
+        <zip destfile="${basedir}/generated/devicemon-ds.esa">
+            <fileset dir="${basedir}/src">
+                <include name="**/*.MF"/>
+            </fileset>
+            <fileset file="${basedir}/../devicemon-ds/generated/devicemon-ds.jar"/>
+            <!--
+            <fileset file="${basedir}/../devicemon-ssh/generated/devicemon-ssh.jar"/>
+            -->
+        </zip>
+    </target>
+
+    <target name="clean">
+        <delete dir="${basedir}/generated"/>
+    </target>
+</project>
+
