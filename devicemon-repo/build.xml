@@ -21,6 +21,14 @@
             <arg value="256"/>
             <arg value="${basedir}/local-repo/cdi.esa"/>
         </exec>
+        
+        <length file="${basedir}/local-repo/http.esa" property="httpl"/>
+        <echo>SHA-256 of local-repo/http.esa (with lenght ${httpl}):</echo>
+        <exec executable="shasum">
+            <arg value="-a"/>
+            <arg value="256"/>
+            <arg value="${basedir}/local-repo/http.esa"/>
+        </exec>
     </target>
 
     <target name="clean">

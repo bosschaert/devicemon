@@ -1,5 +1,92 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1389802088217' name='Untitled' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1400179237015' name='Untitled' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.apache.felix.scr'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.8.2'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='19d395d8800d5546397211edc209e2e42d0ee500c93aca9d04ce69e4288f41d9'/>
+      <attribute name='url' value='local-repo/org.apache.felix.scr-1.8.2.jar'/>
+      <attribute name='size' type='Long' value='267629'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.apache.felix.scr'/>
+      <attribute name='bundle-version' type='Version' value='1.8.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.apache.felix.scr'/>
+      <attribute name='bundle-version' type='Version' value='1.8.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.felix.scr'/>
+      <attribute name='version' type='Version' value='1.8.0'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.scr'/>
+      <attribute name='bundle-version' type='Version' value='1.8.2'/>
+      <directive name='uses' value='org.osgi.framework,org.osgi.service.component'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.felix.scr.component'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='status' value='provisional'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.scr'/>
+      <attribute name='bundle-version' type='Version' value='1.8.2'/>
+      <directive name='mandatory' value='status'/>
+      <directive name='uses' value='org.osgi.service.component'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.component'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.scr'/>
+      <attribute name='bundle-version' type='Version' value='1.8.2'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.extender'>
+      <attribute name='osgi.extender' value='osgi.ds'/>
+      <attribute name='version' type='Version' value='1.1.0'/>
+      <directive name='uses' value='org.osgi.service.component'/>
+      <directive name='effective' value='active'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.felix.scr)(version&gt;=1.8.0)(!(version&gt;=1.9.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <attribute name='status' value='provisional'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.felix.service.command)(version&gt;=0.6.0)(!(version&gt;=1.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.felix.shell)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.cm)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.component)(version&gt;=1.2.0)(!(version&gt;=1.3.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.metatype)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.packageadmin)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.cm)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+  </resource>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.apache.sshd.core'/>
@@ -824,6 +911,74 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='http-subsystem'/>
+      <attribute name='type' value='osgi.subsystem.feature'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='b83acf57e85adeb6b73a05d60bd8f41bc701abd070769af67074aa975da35bb5'/>
+      <attribute name='url' value='local-repo/http.esa'/>
+      <attribute name='size' type='Long' value='1405961'/>
+      <attribute name='mime' value='application/vnd.osgi.subsystem'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.event'/>
+      <attribute name='version' type='Version' value='1.3.0'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.eventadmin'/>
+      <attribute name='bundle-version' type='Version' value='1.3.2'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.service'>
+      <attribute name='objectClass' value='org.osgi.service.event.EventAdmin'/>
+      <directive name='uses' value='org.osgi.service.event'/>
+      <directive name='effective' value='active'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.felix.http.api'/>
+      <attribute name='version' type='Version' value='2.0.4'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.http.jetty'/>
+      <attribute name='bundle-version' type='Version' value='2.2.2'/>
+      <directive name='uses' value='javax.servlet,org.osgi.service.http'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.http'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.http.jetty'/>
+      <attribute name='bundle-version' type='Version' value='2.2.2'/>
+      <directive name='uses' value='javax.servlet.http,javax.servlet'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='javax.servlet'/>
+      <attribute name='version' type='Version' value='2.5.0'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.http.jetty'/>
+      <attribute name='bundle-version' type='Version' value='2.2.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='javax.servlet.resources'/>
+      <attribute name='version' type='Version' value='2.5.0'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.http.jetty'/>
+      <attribute name='bundle-version' type='Version' value='2.2.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='javax.servlet.http'/>
+      <attribute name='version' type='Version' value='2.5.0'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.felix.http.jetty'/>
+      <attribute name='bundle-version' type='Version' value='2.2.2'/>
+      <directive name='uses' value='javax.servlet'/>
+    </capability>
+    <capability namespace='osgi.whiteboard'>
+      <attribute name='osgi.whiteboard' value='osgi.http'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+      <directive name='uses' value='javax.servlet,javax.servlet.http'/>
+    </capability>
+    <capability namespace='osgi.service'>
+      <attribute name='objectClass' value='org.osgi.service.http.HttpService'/>
+      <directive name='uses' value='org.osgi.service.http,javax.servlet,javax.servlet.http'/>
+      <directive name='effective' value='active'/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='cdi-subsystem'/>
       <attribute name='type' value='osgi.subsystem.feature'/>
       <attribute name='version' type='Version' value='0.5.0'/>
@@ -878,4 +1033,5 @@
       <directive name='uses' value='javax.servlet,javax.servlet.http'/>
     </capability>
   </resource>
+
 </repository>
