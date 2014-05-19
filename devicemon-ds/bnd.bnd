@@ -1,9 +1,12 @@
 -buildpath:  \
 	osgi.cmpn;version=5.0,\
 	osgi.core;version=5.0,\
-	javax.servlet;version=2.5
+	javax.servlet;version=2.5,\
+	devicemon-ssh;version=latest
 Bundle-Version: 0.0.0.${tstamp}
-Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.component)(version>=1.2.0)(!(version>=2.0.0)))"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.component)(version>=1.2.0)(!(version>=2.0.0)))",
+  osgi.whiteboard;filter:="(&(osgi.whiteboard=osgi.http)(version>=1.2.0)(!(version>=2.0.0)))"
 Private-Package:  \
 	org.coderthoughts.devicemon.ds
 -dsannotations: *
+-runee: J2SE-1.5

@@ -24,13 +24,14 @@ public class DeviceMonitor {
 
     @Activate
     public void activate(BundleContext bc) throws Exception {
-        System.out.println("*** DeviceMonitor activated: " + httpService);
-        System.out.println("    bc: " + bc);
-
+        String rootCtx = "/";
         Hosts hosts = new Hosts(bc);
 
-        registerServlet("/dmon", new MonitorServlet(hosts));
-        // registerServlet("/device", new DeviceServlet(hosts));
+        if (!rootCtx.endsWith("/"))
+            rootCtx = rootCtx + "/";
+
+        registerServlet(rootCtx + "dmon", new MonitorServlet(hosts));
+        registerServlet(rootCtx + "device", new DeviceServlet(hosts));
     }
 
     private void registerServlet(String ctx, Servlet servlet) {

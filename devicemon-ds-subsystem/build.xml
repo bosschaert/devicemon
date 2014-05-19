@@ -6,9 +6,7 @@
                 <include name="**/*.MF"/>
             </fileset>
             <fileset file="${basedir}/../devicemon-ds/generated/devicemon-ds.jar"/>
-            <!--
             <fileset file="${basedir}/../devicemon-ssh/generated/devicemon-ssh.jar"/>
-            -->
         </zip>
     </target>
 

@@ -12,7 +12,11 @@
 	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
 	osgi.enterprise;version='[4.2.0,4.2.1)',\
 	org.apache.felix.http.jetty;version=2.2.2,\
-	devicemon-ds;version=latest
+	devicemon-ds;version=latest,\
+	devicemon-ssh;version=latest,\
+	org.apache.sshd.core;version=0.9.0,\
+	slf4j.api,\
+	slf4j.simple
 
 -runrequires:  \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
