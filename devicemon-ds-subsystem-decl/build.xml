@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="devicemon-ds-decl.esa" default="build" basedir=".">
+    <target name="build">
+        <copy todir="${basedir}/generated/local-repo">
+            <fileset file="${basedir}/../devicemon-ds/generated/devicemon-ds.jar"/>
+            <fileset file="${basedir}/../devicemon-ssh/generated/devicemon-ssh.jar"/>
+        </copy>
+        <zip destfile="${basedir}/generated/devicemon-ds-decl.esa">
+            <fileset dir="${basedir}/src">
+                <include name="**/*.MF"/>
+            </fileset>
+        </zip>
+
+        <fileset id="bundles" dir="${basedir}/generated/local-repo">
+            <include name="*.jar"/>
+        </fileset>
+        <pathconvert refid="bundles" property="bundlesarg" pathsep=" "/>
+
+        <java jar="${basedir}/lib/org.osgi.impl.bundle.repoindex.cli.jar" dir="${basedir}/generated" fork="true" failonerror="true">
+            <arg line="-r index.xml --pretty ${bundlesarg}"/>
+        </java>
+
+        <!--
+        <length file="${basedir}/generated/local-repo/cdi.esa" property="cdil"/>
+        <echo>SHA-256 of local-repo/cdi.esa (with lenght ${cdil}):</echo>
+        <exec executable="shasum">
+            <arg value="-a"/>
+            <arg value="256"/>
+            <arg value="${basedir}/generated/local-repo/cdi.esa"/>
+        </exec> -->
+
+    </target>
+
+    <target name="clean">
+        <delete dir="${basedir}/generated"/>
+    </target>
+</project>
+
