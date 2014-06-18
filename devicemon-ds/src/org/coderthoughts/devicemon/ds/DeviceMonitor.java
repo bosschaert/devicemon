@@ -23,8 +23,8 @@ public class DeviceMonitor {
     }
 
     @Activate
-    public void activate(BundleContext bc, MonitorConfig cfg) throws Exception {
-        String rootCtx = cfg.ctxPrefix();
+    public void activate(BundleContext bc) throws Exception {
+        String rootCtx = "/";
         Hosts hosts = new Hosts(bc);
 
         if (!rootCtx.endsWith("/"))
